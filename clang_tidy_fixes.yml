@@ -1,0 +1,26 @@
+Diagnostics:
+- DiagnosticMessage:
+    FileOffset: 0
+    FilePath: ''
+    Message: 'unknown argument: ''-pipe'''
+    Replacements: []
+  DiagnosticName: clang-diagnostic-error
+- DiagnosticMessage:
+    FileOffset: 0
+    FilePath: ''
+    Message: 'unknown argument: ''-pipe'''
+    Replacements: []
+  DiagnosticName: clang-diagnostic-error
+- DiagnosticMessage:
+    FileOffset: 0
+    FilePath: ''
+    Message: 'unknown argument: ''-pipe'''
+    Replacements: []
+  DiagnosticName: clang-diagnostic-error
+- DiagnosticMessage:
+    FileOffset: 0
+    FilePath: ''
+    Message: 'unknown argument: ''-pipe'''
+    Replacements: []
+  DiagnosticName: clang-diagnostic-error
+MainSourceFile: ''

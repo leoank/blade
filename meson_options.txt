@@ -1,0 +1,25 @@
+option('enable-tests',
+  type : 'boolean',
+  value : true,
+  description : 'Enables tests.'
+)
+
+option('enable-bench',
+  type : 'boolean',
+  value : true,
+  description : 'Enables tests.'
+)
+
+option('enable-warn-as-errors',
+  type : 'boolean',
+  value : true,
+  description : 'Enables warnings as errors.'
+)
+
+# builddir = join_paths(meson.source_root(), 'builddir')
+
+option('pkg_config_path',
+  type : 'string',
+  value : '${PWD}/builddir',
+  description : 'Set PKG_CONFIG_PATH'
+)
