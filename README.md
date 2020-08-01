@@ -13,12 +13,15 @@ This is blade!
 ```bash
 # create a build directory
 mkdir builddir 
-cd builddir
 
 # install all deps
+cd builddir
 conan profile update settings.compiler.libcxx=libstdc++11 
 conan install ../ --build
+cd ..
 
 # Compile targets
-meson compile
+export PKG_CONFIG_PATH=$PWD/builddir 
+meson builddir
+meson compile -C builddir
 ```
