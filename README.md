@@ -16,8 +16,7 @@ mkdir builddir
 
 # install all deps
 cd builddir
-conan profile update settings.compiler.libcxx=libstdc++11 
-conan install ../ --build
+conan install ../ --build -s compiler.libcxx=libstdc++11
 cd ..
 
 # Compile targets
