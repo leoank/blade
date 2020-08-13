@@ -11,10 +11,11 @@ project_sources = []
 project_header_files = []
 project_test_sources = []
 project_benchmark_sources = []
+profile_args = ['-DBUILD_WITH_EASY_PROFILER']
 perf_args = ['-fno-omit-frame-pointer']
 opt_args = [
   # '-fno-exceptions',
-  '-fno-rtti',
+  # '-fno-rtti',
   '-pedantic'
 ]
 warn_args = [ '-Wall',
