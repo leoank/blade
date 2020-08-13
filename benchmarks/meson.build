@@ -5,13 +5,10 @@ all_benchmark_sources = []
 bench_main_source = files('benchmark_main.cpp')
 
 bench_dep = dependency('benchmark', version: '>=1.5.0')
-all_benchmark_deps += bench_dep
-bench_main_lib = static_library('bench_main', 
-                                bench_main_source,
-                                cpp_args: warn_args + opt_args + perf_args,
-                                dependencies: [bench_dep])
+npas4_dep = dependency('npas4', version: '>=1.0.0')
+common_dep = [bench_dep, npas4_dep]
+all_benchmark_deps += common_dep
 
-all_benchmark_dep_libs += bench_main_lib
 subdir('arrays')
 
 all_benchmarks = executable('all_benchmarks', 

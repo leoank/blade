@@ -3,18 +3,18 @@ array_bench_sources = [
 ]
 
 array_bench_deps = [
-    bench_dep
+
 ]
 
 array_bench_lib_deps = [
     arrays_lib,
-    bench_main_lib
 ]
 
 bench_arrays = executable('bench_arrays', 
-    array_bench_sources, 
+    array_bench_sources,
+    bench_main_source, 
     include_directories : inc,
-    dependencies : [array_bench_deps], 
+    dependencies : [array_bench_deps] + common_dep, 
     link_with : [array_bench_lib_deps])
 
 benchmark('Arrays benchmark', bench_arrays)
