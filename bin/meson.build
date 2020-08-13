@@ -19,9 +19,17 @@ executable('poco_d',
             cpp_args: warn_args + opt_args,
             dependencies: [poco_dep])
 
+easy_profiler_dep = dependency('easy_profiler', version: '>=2.1.0')
 executable('arrays', 
             'arrays.cpp',
-            cpp_args: warn_args + opt_args,
+            cpp_args: opt_args + profile_args,
             include_directories: inc,
-            dependencies: [fmt_dep], 
+            dependencies: [fmt_dep, easy_profiler_dep], 
             link_with: [arrays_lib])
+
+pthread_dep = cpp.find_library('pthread')
+executable('pr', 
+            'pr.cpp',
+            cpp_args: opt_args + profile_args,
+            include_directories: inc,
+            dependencies: [pthread_dep, easy_profiler_dep])

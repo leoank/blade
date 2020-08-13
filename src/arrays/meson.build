@@ -4,5 +4,6 @@ project_sources += arrays_source
 arrays_lib = shared_library('arrays',
                                     arrays_source,
                                     cpp_args: warn_args + opt_args,
-                                    include_directories : inc
+                                    include_directories : inc,
+                                    # dependencies: []
                                     )
